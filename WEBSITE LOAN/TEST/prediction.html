@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Loan Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: larger;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        .container {
+            width: 700px;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group .options {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group .options label {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .form-group .options label:last-child {
+            margin-right: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Prediction system</h1>
+        <form id="loan-form">
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="options">
+                    <label><input type="radio" name="gender" value="1"> Male</label>
+                    <label><input type="radio" name="gender" value="0"> Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Marital Status</label>
+                <div class="options">
+                    <label><input type="radio" name="married" value="1"> Married</label>
+                    <label><input type="radio" name="married" value="0"> Not Married</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Dependents</label>
+                <div class="options">
+                    <label><input type="radio" name="dependents" value="0"> 0</label>
+                    <label><input type="radio" name="dependents" value="1"> 1</label>
+                    <label><input type="radio" name="dependents" value="2"> 2</label>
+                    <label><input type="radio" name="dependents" value="3"> 3+</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Education</label>
+                <div class="options">
+                    <label><input type="radio" name="education" value="1"> Graduate</label>
+                    <label><input type="radio" name="education" value="0"> Not Graduate</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Self-Employed</label>
+                <div class="options">
+                    <label><input type="radio" name="self-employed" value="1"> Yes</label>
+                    <label><input type="radio" name="self-employed" value="0"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Applicant Income</label>
+                <input type="number" name="applicant-income" placeholder="Enter Applicant Income" required>
+            </div>
+            <div class="form-group">
+                <label>Co-Applicant Income</label>
+                <input type="number" name="coapplicant-income" placeholder="Enter Co-Applicant Income" required>
+            </div>
+            <div class="form-group">
+                <label>Loan Amount</label>
+                <input type="number" name="loan-amount" placeholder="Enter Loan Amount" required>
+            </div>
+            <div class="form-group">
+                <label>Loan Amount Term</label>
+                <input type="number" name="loan-amount-term" placeholder="Enter Loan Amount Term" required>
+            </div>
+            <div class="form-group">
+                <label>Credit History</label>
+                <div class="options">
+                    <label><input type="radio" name="credit-history" value="1"> Good</label>
+                    <label><input type="radio" name="credit-history" value="0"> Bad</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Area</label>
+                <div class="options">
+                    <label><input type="radio" name="property-area" value="0"> Rural</label>
+                    <label><input type="radio" name="property-area" value="1"> Semi-Urban</label>
+                    <label><input type="radio" name="property-area" value="2"> Urban</label>
+                </div>
+            </div>
+            <button type="button" id="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>

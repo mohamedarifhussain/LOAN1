@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+
+
+
+
+
+
+
+    <style>
+        
+		*{
+			text-decoration: none;
+		}
+
+    body {
+      background-image:url("finance.jpg") ;
+      /* background-color: rgb(221, 236, 136); */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      }
+		.navbar{
+			background: rgb(23, 2, 15); font-family: calibri; padding-right: 15px;padding-left: 15px;
+		}
+		.navdiv{
+			display: flex; align-items: center; justify-content: space-between;
+		}
+		.logo a{
+			font-size: 35px; font-weight: 600; color: white;
+		}
+		li{
+			list-style: none; display: inline-block;
+		}
+		li a{
+            cursor: pointer;
+			color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+		}
+		button{
+			background-color: rgb(63, 47, 206); margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+		}
+		button a{
+			color: white; font-weight: bold; font-size: 15px;
+		}
+
+
+       
+    .content{
+
+      
+      width: 1000px;
+      height: auto;
+      margin: auto;
+      color:rgb(255, 240, 77);
+
+   }
+   .content h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100px;
+    padding-bottom: 0px;
+   }
+    
+   .content .par{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color:rgb(255, 255, 255)
+
+   }
+
+   .content  .cn{
+    text-align: center;
+    border: 0px;
+    background-size: cover;
+   }
+
+
+
+   .information body {
+
+    
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.information header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.information main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.information section {
+    margin-bottom: 20px;
+}
+
+.information h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #007bff;
+}
+
+.information button {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.information button:hover {
+    background: #218838;
+}
+
+.information #result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+  
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+	<nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">Loan Predictor</a> </div>
+			<ul>
+				<li id="ABOUT"><a>About</a></li>
+				<li id = "TECHNOLOGY"><a>Technology</a></li>
+				<button><a href="prediction.html">Predict</a></button>
+			</ul>
+		</div>
+	</nav>
+ 
+    <div class="content">
+  
+        <h1>Welcome to Loan Predictor</h1>
+   
+        <p class="par">Discover Your Loan Eligibility in Minutes with Our Advanced Predictor
+        </p>
+        <button class="btn"><a href="prediction.html"> Start Predict</a></button>
+        </div>
+    
+        <div class="information">
+        <main>
+            <section id="about">
+                <h2>About Us</h2>
+                <p>We are dedicated to helping individuals understand their loan eligibility through advanced predictive analytics. Our goal is to provide you with the insights you need to make informed financial decisions.</p>
+            </section>
+    
+            <section id="technology">
+                <h2>Technology</h2>
+                <p>Our loan prediction system utilizes machine learning algorithms to analyze various factors such as income, credit score, and loan amount. This technology allows us to provide accurate predictions and recommendations tailored to your financial situation.</p>
+            </section>
+    
+            <section id="predict">
+                <h2>Predict Your Loan Eligibility</h2>
+                <button id="predict-button">Check Eligibility</button>
+                <div id="result"></div>
+            </section>
+        </main>
+    </div>
+    
+        <footer>
+            <p>&copy; 2024 Loan Predictor. All rights reserved.</p>
+        </footer>
+    
+
+
+
+
+
+
+
+
+    <script>
+        
+const aboutButton = document.getElementById('ABOUT');
+const aboutSection = document.getElementById('about');
+
+aboutButton.addEventListener('click', () => {
+  aboutSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+const TechnologyButton = document.getElementById('TECHNOLOGY');
+const TechnologySection = document.getElementById('technology');
+
+TechnologyButton.addEventListener('click', () => {
+  TechnologySection.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
